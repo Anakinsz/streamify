@@ -31,16 +31,13 @@ O projeto é dividido nas seguintes seções:
 - **`register_action.php`**: Lógica de backend para processar o registro do usuário e armazenar os dados no banco de dados.
 - **`login_action.php`**: Lógica de backend para autenticar o usuário durante o login.
 
-2. Configuração do Banco de Dados
+## 2. Configuração do Banco de Dados
 Criar o Banco de Dados: Abra o phpMyAdmin ou acesse o MySQL via linha de comando e crie o banco de dados streamify.
-
 sql
-Copiar
 CREATE DATABASE streamify;
-Criar a Tabela de Usuários:
 
+## Criar a Tabela de Usuários:
 sql
-Copiar
 USE streamify;
 
 CREATE TABLE users (
@@ -50,10 +47,9 @@ CREATE TABLE users (
     password VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-Criar a Tabela de Playlists:
 
+## Criar a Tabela de Playlists:
 sql
-Copiar
 CREATE TABLE playlists (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
@@ -61,10 +57,9 @@ CREATE TABLE playlists (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
-Criar a Tabela de Músicas:
 
+## Criar a Tabela de Músicas:
 sql
-Copiar
 CREATE TABLE songs (
     id INT AUTO_INCREMENT PRIMARY KEY,
     playlist_id INT NOT NULL,
@@ -72,16 +67,16 @@ CREATE TABLE songs (
     song_url VARCHAR(255) NOT NULL,
     FOREIGN KEY (playlist_id) REFERENCES playlists(id)
 );
-3. Configuração do Banco de Dados no PHP
-Abra o arquivo config.php e configure suas credenciais do MySQL:
+## 3. Configuração do Banco de Dados no PHP
+**Abra o arquivo config.php e configure suas credenciais do MySQL:**
 
 php
-Copiar
 $servername = "localhost";
 $username = "root";   // Usuário padrão do MySQL no XAMPP
 $password = "";       // Senha em branco, caso esteja usando o XAMPP
 $dbname = "streamify"; // Nome do banco de dados
-4. Executando o Sistema
+
+##4. Executando o Sistema
 Coloque todos os arquivos do projeto na pasta htdocs (se você estiver usando o XAMPP).
 
 Acesse o sistema no seu navegador através de http://localhost/streamify.
@@ -90,8 +85,8 @@ Registre-se criando uma conta de usuário.
 
 Faça login e comece a criar e visualizar suas playlists e músicas.
 
-Arquivos Principais
-index.php: Página principal onde o usuário visualiza suas playlists e pode acessar o player de música.
+## Arquivos Principais
+**index.php: Página principal onde o usuário visualiza suas playlists e pode acessar o player de música.**
 
 login.php: Formulário de login para os usuários autenticados.
 
@@ -105,8 +100,8 @@ register_action.php: Processa o registro de um novo usuário e salva as informa�
 
 login_action.php: Verifica as credenciais de login e autentica o usuário.
 
-Fluxo de Uso
-Cadastro de Usuário: O usuário preenche o formulário de registro em register.php e os dados são inseridos no banco de dados com a senha criptografada.
+## Fluxo de Uso
+**Cadastro de Usuário: O usuário preenche o formulário de registro em register.php e os dados são inseridos no banco de dados com a senha criptografada.**
 
 Login: Após o registro, o usuário faz login em login.php para acessar suas playlists e músicas.
 
