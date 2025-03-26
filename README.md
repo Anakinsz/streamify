@@ -49,14 +49,14 @@ CREATE TABLE users (
 );
 
 ## Criar a Tabela de Playlists:
-sql
+`sql
 CREATE TABLE playlists (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
     playlist_name VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id)
-);
+);`
 
 ## Criar a Tabela de Músicas:
 sql
