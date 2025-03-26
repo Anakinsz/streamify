@@ -59,22 +59,27 @@ CREATE TABLE playlists (
 );`
 
 ## Criar a Tabela de Músicas:
-sql
+`sql
 CREATE TABLE songs (
     id INT AUTO_INCREMENT PRIMARY KEY,
     playlist_id INT NOT NULL,
     song_title VARCHAR(255) NOT NULL,
     song_url VARCHAR(255) NOT NULL,
     FOREIGN KEY (playlist_id) REFERENCES playlists(id)
-);
+);`
+
 ## 3. Configuração do Banco de Dados no PHP
 **Abra o arquivo config.php e configure suas credenciais do MySQL:**
 
-php
-$servername = "localhost";
-$username = "root";   // Usuário padrão do MySQL no XAMPP
-$password = "";       // Senha em branco, caso esteja usando o XAMPP
-$dbname = "streamify"; // Nome do banco de dados
+`php`
+
+`$servername = "localhost";`
+
+`$username = "root";   // Usuário padrão do MySQL no XAMPP`
+
+`$password = "";       // Senha em branco, caso esteja usando o XAMPP`
+
+`$dbname = "streamify"; // Nome do banco de dados`
 
 ##4. Executando o Sistema
 Coloque todos os arquivos do projeto na pasta htdocs (se você estiver usando o XAMPP).
