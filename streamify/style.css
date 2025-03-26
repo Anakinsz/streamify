@@ -59,7 +59,7 @@ header nav ul li a:hover {
 
 /* Container principal */
 .container {
-    margin-top: 100px; /* Para não sobrepor o cabeçalho fixo */
+    margin-top: 100px; 
     width: 100%;
     max-width: 900px;
     padding: 30px;
@@ -206,7 +206,7 @@ header nav ul li a:hover {
 
 /* Container principal */
 .container {
-    margin-top: 100px; /* Para não sobrepor o cabeçalho fixo */
+    margin-top: 100px; 
     width: 100%;
     max-width: 400px;
     padding: 30px;
