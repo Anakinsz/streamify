@@ -37,36 +37,55 @@ sql
 CREATE DATABASE streamify;
 
 ## Criar a Tabela de Usuários:
-sql
-USE streamify;
+`sql`
+`USE streamify;`
 
-CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+`CREATE TABLE users (`
+
+    `id INT AUTO_INCREMENT PRIMARY KEY,`
+
+    `username VARCHAR(255) NOT NULL,`
+
+    `email VARCHAR(255) NOT NULL UNIQUE,`
+
+    `password VARCHAR(255) NOT NULL,`
+
+   ` created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP`
+
+`);`
 
 ## Criar a Tabela de Playlists:
-`sql
-CREATE TABLE playlists (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
-    playlist_name VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(id)
-);`
+`sql`
+
+`CREATE TABLE playlists (`
+
+    `id INT AUTO_INCREMENT PRIMARY KEY,`
+    
+    `user_id INT NOT NULL,`
+    
+    `playlist_name VARCHAR(255) NOT NULL,`
+    
+    `created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,`
+    
+    `FOREIGN KEY (user_id) REFERENCES users(id)`
+`);`
 
 ## Criar a Tabela de Músicas:
-`sql
-CREATE TABLE songs (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    playlist_id INT NOT NULL,
-    song_title VARCHAR(255) NOT NULL,
-    song_url VARCHAR(255) NOT NULL,
-    FOREIGN KEY (playlist_id) REFERENCES playlists(id)
-);`
+`sql`
+
+`CREATE TABLE songs (`
+ 
+   `id INT AUTO_INCREMENT PRIMARY KEY,`
+
+    `playlist_id INT NOT NULL,`
+
+    `song_title VARCHAR(255) NOT NULL,`
+
+    `song_url VARCHAR(255) NOT NULL,`
+
+    `FOREIGN KEY (playlist_id) REFERENCES playlists(id)`
+
+`);`
 
 ## 3. Configuração do Banco de Dados no PHP
 **Abra o arquivo config.php e configure suas credenciais do MySQL:**
