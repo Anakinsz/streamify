@@ -1,0 +1,282 @@
+/* Resetando margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo principal */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Cabeçalho de navegação */
+header {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    text-align: center;
+    font-size: 2rem;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Container principal */
+.container {
+    margin-top: 100px; /* Para não sobrepor o cabeçalho fixo */
+    width: 100%;
+    max-width: 900px;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Botões de navegação */
+.buttons a {
+    text-decoration: none;
+    margin: 10px;
+}
+
+.buttons button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 200px;
+}
+
+.buttons button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para Playlists */
+.playlists {
+    margin-top: 30px;
+}
+
+.playlist-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.playlist-card {
+    width: 250px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.playlist-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.playlist-card h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #4CAF50;
+}
+
+.playlist-card p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Rodapé */
+footer {
+    text-align: end;
+    margin-top: 30px;
+    color: #777;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 768px) {
+    .buttons button {
+        width: 150px;
+    }
+
+    .playlist-container {
+        flex-direction: column;
+    }
+}
+/* Resetando margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo principal */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Cabeçalho de navegação */
+header {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    text-align: center;
+    font-size: 2rem;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Container principal */
+.container {
+    margin-top: 100px; /* Para não sobrepor o cabeçalho fixo */
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilo dos formulários de Login e Registro */
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    background-color: #e9f7e9;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Links */
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #777;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
